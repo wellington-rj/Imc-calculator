@@ -1,15 +1,16 @@
-import React, { useState } from "react"
-import { View, Button, Text, TextInput} from "react-native"
-import ResultImc from "./Resultimc/index"
+import { useState } from "react";
+import { Button, Text, TextInput, TouchableOpacity, View } from "react-native";
+import ResultImc from "./Resultimc/index";
+import styles from "./style";
 export default function Form() {
-  const [heigth, setHeigth] = useState(null)
-  const [weigth, setWeigth] = useState(null)
-  const [messageImc, setMessageImc] = useState("preencha o peso e altura")
-  const [imc, setImc] = useState(null)
-  const [textButton, setTextButton] = useState("Calcular")
+  const [heigth, setHeigth] = useState(null);
+  const [weigth, setWeigth] = useState(null);
+  const [messageImc, setMessageImc] = useState("preencha o peso e altura");
+  const [imc, setImc] = useState(null);
+  const [textButton, setTextButton] = useState("Calcular");
 
   function imcCalculator() {
-    return setImc(  (   (weigth / heigth) * heigth).toFixed(2)  );
+    return setImc(((weigth / heigth) * heigth).toFixed(2));
   }
 
   function validationImc() {
@@ -27,31 +28,34 @@ export default function Form() {
   }
 
   return (
-    <View>
-      <View>
-        <Text>Altura</Text>
+    <View style={styles.formContext}>
+      <View style={styles.form}>
+        
+        <Text style={styles.formLabel}>Altura</Text>
         <TextInput 
-            onChangeText={setHeigth} 
-            value={heigth}
-            placeholder="Ex: 1.75" 
-            keyboardType="numeric"> 
-        </TextInput>
+        style={styles.input}
+          onChangeText={setHeigth}
+          value={heigth}
+          placeholder="Ex: 1.75"
+          keyboardType="numeric"
+        ></TextInput>
 
-        <Text>Peso</Text>
+        <Text style={styles.formLabel} >Peso</Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={setWeigth}
+          value={weigth}
+          placeholder="Ex: 80"
+          keyboardType="numeric"
+        ></TextInput>
 
-        <TextInput 
-            onChangeText={setWeigth} 
-            value={weigth}
-            placeholder="Ex: 80" 
-            keyboardType="numeric">
-        </TextInput>
-
-        <Button onPress={()=> validationImc()}
-        title={textButton}>
-        </Button>
-
+        <TouchableOpacity style={styles.ButtonCalculator} onPress={() => {validationImc() }}>
+          <Text style={styles.textButtonCalculator}> {textButton}</Text>
+          </TouchableOpacity>
       </View>
-        <ResultImc messageResultImc={messageImc} resultImc={imc}>  </ResultImc>
+      <ResultImc messageResultImc={messageImc} resultImc={imc}>
+
+      </ResultImc>
     </View>
   );
 }

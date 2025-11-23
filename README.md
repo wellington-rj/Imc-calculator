@@ -1,11 +1,10 @@
-# 📱 IMC Calculator
+IMC Calculator
 
 Uma aplicação simples desenvolvida em **React Native (Expo)** para calcular o Índice de Massa Corporal (IMC) de forma rápida e intuitiva.  
 O objetivo do projeto é praticar conceitos fundamentais como **componentização**, **hooks (useState)**, **props**, **estilização**, e navegação básica.
 
 ---
-
-## 🚀 Tecnologias utilizadas
+Tecnologias utilizadas
 
 - **React Native**
 - **Expo**
@@ -14,9 +13,7 @@ O objetivo do projeto é praticar conceitos fundamentais como **componentizaçã
 - Componentização
 - Estilização com StyleSheet
 
----
-
-## 📊 Funcionalidades
+ Funcionalidades
 
 - Inserir **altura** (ex: 1.75)
 - Inserir **peso** (ex: 80 kg)

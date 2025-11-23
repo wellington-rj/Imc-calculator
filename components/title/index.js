@@ -1,10 +1,10 @@
 import react from "react"
 import { View, Text } from "react-native"
-
+import styles from "./style";
 export default function Title(){
     return(
-        <View>
-            <Text>Onebithealth</Text>
+        <View style={styles.boxTitle}>
+            <Text style={styles.textTitle}>Onebithealth</Text>
         </View>
       );
 }
