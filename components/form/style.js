@@ -25,30 +25,37 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
   },
 
-  input:{
-    width:"90%",
-    borderRadius:50,
-    backgroundColor:"#e6ddddbc",
-    height:40,
-    margin:12,
-    paddingLeft:10,
+  input: {
+    width: "90%",
+    borderRadius: 50,
+    backgroundColor: "#e6ddddbc",
+    height: 40,
+    margin: 12,
+    paddingLeft: 10,
   },
 
-  ButtonCalculator:{
-    borderRadius:50,
-    alignItems:"center",
+  ButtonCalculator: {
+    borderRadius: 50,
+    alignItems: "center",
     justifyContent: "center",
-    width:"90%",
-    backgroundColor:"#ff0043",
-    paddingTop:14,
-    paddingBottom:14,
-    marginLeft:12,
-    margin:30,
+    width: "90%",
+    backgroundColor: "#ff0043",
+    paddingTop: 14,
+    paddingBottom: 14,
+    marginLeft: 12,
+    margin: 30,
   },
 
-  textButtonCalculator:{
-    fontSize:20,
-    color:"#ffffff"
+  textButtonCalculator: {
+    fontSize: 20,
+    color: "#ffffff",
+  },
+
+  errorMessage: {
+    fontSize: 12,
+    color: "#ff0043",
+    fontWeight: "bold",
+    paddingLeft: 20,
   },
 });
 
